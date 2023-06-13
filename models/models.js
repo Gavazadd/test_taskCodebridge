@@ -3,10 +3,10 @@ const {DataTypes} = require('sequelize')
 
 const Dog = sequelize.define('dog', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    name: {type: DataTypes.STRING, unique: true, allowNull: false},
+    name: {type: DataTypes.STRING, allowNull: false},
     color: {type: DataTypes.STRING, allowNull: false},
-    tail_length:{type: DataTypes.INTEGER, allowNull: false},
-    weight: {type: DataTypes.INTEGER, allowNull: false},
+    tail_length:{type: DataTypes.FLOAT, allowNull: false},
+    weight: {type: DataTypes.FLOAT, allowNull: false},
 })
 
 module.exports = {Dog}
